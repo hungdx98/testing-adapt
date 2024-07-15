@@ -4,8 +4,10 @@ import './App.css';
 function App() {
 
   const handleSocialLogin = () => {
-    const opened = window.open('https://auth.v2.ramper.xyz/wallet/signin')
-    if (!opened) alert('please allow popup setting')
+    const opened = setTimeout(() => {
+      window.open('https://auth.v2.ramper.xyz/wallet/signin')
+      if (!opened) alert('please allow popup setting')
+    }, 1000);
   }
 
   return (
